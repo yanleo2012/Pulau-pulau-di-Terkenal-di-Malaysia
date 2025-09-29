@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pulau-pulau Terkenal di Malaysia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Caveat Brush', cursive;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .banner {
+      height: 20vh; /* 20% viewport height */
+      width: 100%;
+      overflow: hidden;
+      background-image: url('https://i0.wp.com/elsacyril.com/wp-content/uploads/2019/10/Elsa-Cyril-Perhentian-Islands-2019-6.png?fit=1024%2C768&ssl=1');
+      background-size: cover;
+      position: relative;
+    }
+
+    .banner h1 {
+      position: absolute;
+      left: 49%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 42px;
+      color: white;
+      margin: 0;
+      font-family: 'Blackball Brush', cursive;
+    }
+
+    .underline-text {
+      position: absolute;
+      left: 49%;
+      top: 78%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: white;
+      font-family: 'Caveat Brush', cursive;
+    }
+
+    .frame-container {
+      display: flex;
+      height: 80vh; /* remaining 80% viewport height */
+      width: 100%;
+    }
+
+    .frame {
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .menu {
+      width: 20%;
+      background-image: url('https://images.rawpixel.com/image_social_portrait/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsb2ZmaWNlOF9waG90b19vZl9hX3ZlcnlfY2xlYXJfdmlld19vZl90aGVfYmx1ZV93YXRlcl9iZV8wMzg0MTU3MS1hZTE3LTRlMzEtYjZhYi1mZjczMTJmMjNmZjBfMS5qcGc.jpg');
+      background-size: cover;
+      color: black;
+      font-size: 25px;
+      overflow: hidden; /* prevent scroll */
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      background-color: rgba(255, 255, 255, 0.7);
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .menu li:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+      display: block;
+    }
+
+    .pengenalan {
+      width: 60%;
+      background-image: url('https://img.freepik.com/free-vector/blurred-beach-background-design_1107-146.jpg?semt=ais_hybrid&w=740&q=80');
+      background-size: cover;
+      color: black;
+      font-size: 23px;
+      overflow-y: auto; /* only this scrolls */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .pengenalan h1 {
+      text-decoration: underline;
+      margin-top: 0;
+    }
+
+    .pengenalan img {
+      max-width: 100%;
+      max-height: 300px;
+      height: auto;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .ruang-komen {
+      background-color: rgba(255, 255, 255, 0.8);
+	  background-image:url('https://images.unsplash.com/photo-1532457880-42ff599f376a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 90%;
+    }
+
+    .ruang-komen input,
+    .ruang-komen textarea {
+      width: 70%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-family: inherit;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .ruang-komen button {
+      padding: 10px 10px;
+      font-size: 20px;
+      background-color: #00CED1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 20%;
+    }
+
+    .ruang-komen button:hover {
+      background-color: #0056b3;
+    }
+
+    .komen-item {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e6f7ff;
+      border-radius: 5px;
+    }
+
+    .komen-item strong {
+      display: block;
+      font-size: 20px;
+    }
+
+    .frame-3 {
+      width: 20%;
+      background-image: url('https://media.istockphoto.com/id/595321168/photo/treetops-of-dense-tropical-rainforest-with-morning-fog-located-n.jpg?s=612x612&w=0&k=20&c=LaECmGt5FT2N_iyiPhgKXTIcG3blWgdajVHmECYWi2E=');
+      background-size: cover;
+      color: black;
+      font-size: 23px;
+      overflow: hidden; /* prevent scroll */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Pulau-pulau Terkenal di Malaysia</h1>
+    <div class="underline-text"><u>Liew Zhi Yan</u></div> 
+  </div>
+
+  <!-- Frame -->
+  <div class="frame-container">
+    <div class="frame menu">
+      <h1>Menu</h1>
+      <nav> 
+        <ul>
+          <li><a href="Menu1(NT).html">Negeri Terengganu</a></li>
+          <li><a href="Menu2(NS).html">Negeri Sabah</a></li>
+          <li><a href="Menu3(NLL).html">Negeri-negeri Lain</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="frame pengenalan">
+      <h1>Pengenalan</h1>
+      <p>Malaysia merupakan salah satu negara di Asia Tenggara yang mengagumkan. Malaysia bukan sahaja terdapat budaya yang unik dan makanan yang pelbagai, ia juga terdapat tempat pelancongan yang menarik, sama ada yang terdapat dalam alam semula jadi atau teknologi.</p>
+      <img src="https://maps-malaysia-my.com/img/0/live-map-malaysia.jpg" alt="Peta Malaysia" />
+      <p>Lokasi geografi Malaysia yang terletak di antara Laut China Selatan dan Selat Melaka membolehkan kehidupan alam semula jadi untuk berkembang. Contohnya, haiwan yang jarang dijumpai seperti harimau Malaya, beruang matahari, gajah pygmy Borneo dan monyet Proboscis.</p>
+      <img src="https://images.squarespace-cdn.com/content/v1/54ac9e94e4b0c9d38e248bf6/8bf60f8a-2ef6-4427-a9b7-ca0dbaca5fc6/Proboscis-monkey.png" alt="Proboscis Monkey" />
+      <p>Malaysia terdapat hutan hujan yang tebal megah, pantai yang indah dan pulau-pulau yang cantik. Pulau-pulau di negara ini terkenal dengan keindahan dan hidupan marin yang kaya. Terdapat dua negeri di Malaysia yang mempunyai pulau-pulau tercantik, iaitu negeri Sabah dan negeri Terengganu.</p>
+      <img src="https://media1.thrillophilia.com/filestore/f6xqty1ud1oxdknfy2erhcjc9r7w_1578662870_langkawi-island-malaysia-8.jpg?w=400&dpr=2" alt="Langkawi Island" />
+      
+      <div class="ruang-komen">
+        <h2>💬 Ruang Komen</h2>
+        <form onsubmit="tambahKomen(event)">
+          <label for="nama">Nama:</label><br />
+          <input type="text" id="nama" name="nama" /><br />
+
+          <label for="komen">Komen:</label><br />
+          <textarea id="komen" name="komen"></textarea><br /><br />
+
+          <button type="submit">Hantar Komen</button>
+        </form>
+
+        <div id="senarai-komen"></div>
+      </div>
+    </div>
+
+    <div class="frame frame-3">
+      <h1 style="color: black;">Gambar</h1>
+    </div>
+  </div>
+
+  <!-- JavaScript for showing komen -->
+  <script>
+    function tambahKomen(event) {
+      event.preventDefault();
+
+      const nama = document.getElementById("nama").value.trim();
+      const komen = document.getElementById("komen").value.trim();
+      const senaraiKomen = document.getElementById("senarai-komen");
+
+      if (nama && komen) {
+        const komenItem = document.createElement("div");
+        komenItem.className = "komen-item";
+        komenItem.innerHTML = `<strong>${nama}</strong>${komen}`;
+        senaraiKomen.appendChild(komenItem);
+
+        // Clear form
+        document.getElementById("nama").value = "";
+        document.getElementById("komen").value = "";
+      } 
+    }
+  </script>
+
+</body>
+</html>
